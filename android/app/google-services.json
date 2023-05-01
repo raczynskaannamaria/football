@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "21345255770",
+    "project_id": "football357",
+    "storage_bucket": "football357.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21345255770:android:6fd4e632f6656593937363",
+        "android_client_info": {
+          "package_name": "com.annaraczynska.football"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21345255770-20quh3vhrhfjgovlctasrvh30kl82oav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXX6UN0RNMQ48Rqi0i2iaIlL8COn7aDKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21345255770-20quh3vhrhfjgovlctasrvh30kl82oav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
