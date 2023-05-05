@@ -28,12 +28,12 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Jesteś zalogowany jako ${user.email}'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut();
               },
-              child: Text('Log out'),
+              child: const Text('Log out'),
             ),
           ],
         ),

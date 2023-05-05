@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 
 class UserProfileScreen extends StatelessWidget {
@@ -6,16 +7,19 @@ class UserProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProfileScreen(
-      providerConfigs: const [
-        EmailProviderConfiguration(),
-      ],
-      actions: [
-        SignedOutAction((context) {
-          Navigator.of(context).pop();
-        }),
-      ],
-      avatarSize: 48,
+    return Scaffold(
+      appBar: AppBar(),
+      body: ProfileScreen(
+        providerConfigs: const [
+          EmailProviderConfiguration(),
+        ],
+        actions: [
+          SignedOutAction((context) {
+            Navigator.of(context).pop();
+          }),
+        ],
+        avatarSize: 48,
+      ),
     );
   }
 }
