@@ -2,7 +2,10 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:football/features/auth/user_profile.dart';
+import 'package:football/features/account/my_account_page_content.dart';
+import 'package:football/features/add/add_event_page_content.dart';
+import 'package:football/features/event/event_page_content.dart';
+import 'package:football/features/login/auth/user_profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.user});
@@ -35,24 +38,13 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return const Center(
-            child: Text('First'),
-          );
+          return EventPageContent();
         }
         if (currentIndex == 1) {
-          return const Center(
-            child: Text('Second'),
-          );
+          return AddEventPageContent();
         }
 
-        return Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Jesteś zalogowany jako ${widget.user.email}'),
-            ],
-          ),
-        );
+        return MyAccountPageContent(email: widget.user.email);
       }),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
@@ -63,16 +55,25 @@ class _HomePageState extends State<HomePage> {
         },
         items: [
           const BottomNavigationBarItem(
-            icon: Icon(Icons.sports_soccer, color: Color(0xFF3d405b)),
-            label: 'Reviews',
+            icon: Icon(
+              Icons.sports_soccer,
+              color: Color(0xFF3d405b),
+            ),
+            label: '',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.add, color: Color(0xFF3d405b)),
-            label: 'Add',
+            icon: Icon(
+              Icons.add,
+              color: Color(0xFF3d405b),
+            ),
+            label: '',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Color(0xFF3d405b)),
-            label: 'My account',
+            icon: Icon(
+              Icons.person,
+              color: Color(0xFF3d405b),
+            ),
+            label: '',
           ),
         ],
         backgroundColor: const Color.fromARGB(180, 156, 195, 129),
